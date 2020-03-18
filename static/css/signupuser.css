@@ -1,0 +1,39 @@
+body{
+     background:url('/static/images/signup.jpg');
+     background-size:cover;
+}
+.wrap{
+      max-width: 600px;
+      margin:auto;
+      background:rgba(250,200,210,2.9);
+      box-sizing:border-box;
+      padding:30px;
+      color:#fff;
+      margin-top:100px;
+}
+   h2{
+     font-family: Monotype Corsiva;
+     color: black;
+     }
+   h4{
+     font-family: Times New Roman;
+     color: Black;
+     }
+input[type=submit]{
+     width: 50%;    
+     box-sizing:border-box;
+     padding:10px 0;
+     margin-top:5px;
+     outline:none;
+     border:none;
+     background:#60adde;
+     opacity:0.7;
+     border-radius:20px;
+     font-size:20px;
+     color:#fff;
+     font-family: Curlz MT;
+}
+input[type=submit]:hover{
+     background:#31073e;
+     opacity:0.7;
+}

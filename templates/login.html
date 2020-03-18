@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+<head>
+<title>Login</title>
+<link rel ="stylesheet" href ="{% static 'css/signlog.css' %}">
+</head>
+<body>
+<div class="wrap">
+    {% for message in messages %}
+        <h>{{ message }}</h>
+    {% endfor %}
+    <h2> Login Here </h2>
+    <form action="." method="post">
+        {% csrf_token %}
+         <input type="email" name="email" placeholder="email" value=""><br>
+	 <input type="password" name="password" placeholder="Password" value=""><br>
+	 <pre>Remember Password <input type="checkbox" ></pre>
+         <pre><a href = "{% url 'app1:forgot' %}" target = "_self">Forgot Password</a></pre><br>
+         <input type="submit" placeholder="Login" value="Login"><br>
+         <br>
+         <pre>			    OR		</pre>
+         <pre> Not Yet Registered? <input type="button" onClick="location.href='{% url 'app1:signup' %}'" value="Register Now"></pre>
+    </form>
+
+</div>
+</body>
+</html>

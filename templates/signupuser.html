@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head>
+<title>Sign Up</title>
+<link rel="stylesheet" href="{% static 'css/signupuser.css' %}">
+</head>
+<body>
+<div class="wrap">
+     <h2> Sign Up for a Free Account </h2>
+     <h4> Select below the type of Account You want to create </h4>
+
+     <input type="submit" onClick="location.href='{% url 'app1:doctor' %}'" value="I'm a Doctor">
+     <input type="submit" onClick="location.href='{% url 'app1:patient' %}'" value="I'm a Patient">
+
+</div>
+</body>
+</html>
+
+          

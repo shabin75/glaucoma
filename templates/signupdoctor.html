@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+<title>Sign Up for Doctor</title>
+<link rel ="stylesheet" href ="{% static 'css/signlog.css' %}">
+</head>
+<body>
+<div class="wrap">
+    <h2> Sign up Here </h2>
+    <form action="." method="post">
+        {% csrf_token %}
+         <input type="text" name="name" placeholder="Name" value="" required><br>
+         <input type="text" name="id" placeholder="Doctor_Id" value="" required><br>
+         <input type="date" name="bday" value="bday" required><br><br>
+         <input type="radio" name="gender" value="male" checked> Male
+         <input type="radio" name="gender" value="female"> Female
+         <input type="radio" name="gender" value="other"> Other<br>
+         <input type="text" name="hospital" placeholder="Hospital Name" value="" required><br>
+         <input type="email" placeholder="Mail Id" name="email" required><br>
+         <input type="text" name="mob" placeholder="Contact No" value="" required><br>
+         <input type="text" name="username" placeholder="Username" value="" required><br>
+	     <input type="password" name="password1" placeholder="Password" value="" required><br>
+         <input type="password" name="password2" placeholder="Confirm Password" value="" required><br>
+         <input type="submit" placeholder="Register" value="Register"><br>
+    </form>
+    {% for message in messages %}
+        <h>{{ message }}</h>
+    {% endfor %}
+</div>
+
+</body>
+</html>
